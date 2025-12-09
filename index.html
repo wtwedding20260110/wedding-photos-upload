@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活動照片上傳 - 感謝分享</title>
+    <style>
+        /* 替換此 URL 為您的背景圖片連結 */
+        :root {
+            --background-image: url("YOUR_BACKGROUND_PHOTO_URL.jpg"); 
+            --primary-color: #ffffff; /* White text */
+            --button-bg: #8B0000; /* Dark Red button */
+            --button-hover-bg: #5a0000;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: var(--primary-color);
+            background: var(--background-image) no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            /* 半透明黑色疊層，確保文字在任何背景上都清晰可讀 */
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 40px 30px;
+            border-radius: 15px;
+            max-width: 90%;
+            backdrop-filter: blur(5px); /* 輕微模糊背景，提升質感 */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .upload-button {
+            display: inline-block;
+            background-color: var(--button-bg);
+            color: var(--primary-color);
+            padding: 15px 35px;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .upload-button:hover {
+            background-color: var(--button-hover-bg);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>感謝您今天抽空出席我們的婚禮！</h1>
+    <p>請在此上傳您拍攝的所有照片與影片，一同分享美好的回憶。</p>
+    <a href="https://forms.gle/NzGJUCjaFFDmfocw7" class="upload-button">
+        點擊上傳照片與影片
+    </a>
+    <p style="font-size: 0.9em; margin-top: 25px; opacity: 0.8;">
+        您的檔案將直接儲存到我們的 Google Drive 專屬資料夾。
+    </p>
+</div>
+
+</body>
+</html>
