@@ -7,7 +7,8 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Huninn&display=swap');
         :root {
-            --background-image: url("wedding_bg.jpg"); 
+            --bg-desktop: url("wedding_bg2.jpg"); 
+            --bg-mobile: url("wedding_bg.jpg");
             --primary-color: #FFFFFF; /* White text */
             --button-bg: #BD9A7A; /* Light brown button */
             --button-hover-bg: #A08365;
@@ -18,7 +19,8 @@
             margin: 0;
             font-family: 'Huninn', 'Varela Round', sans-serif;
             color: var(--primary-color);
-            background: var(--background-image) no-repeat center center fixed;
+            /* --- DEFAULT BACKGROUND (DESKTOP) --- */
+            background: var(--bg-desktop) no-repeat center center fixed;
             background-size: cover;
             text-align: center;
             display: flex;
@@ -27,18 +29,17 @@
         }
 
         .container {
-            /* 半透明黑色疊層，確保文字在任何背景上都清晰可讀 */
             background-color: rgba(0, 0, 0, 0.3);
             padding: 40px 30px;
             border-radius: 15px;
             max-width: 90%;
-            backdrop-filter: blur(5px); /* 輕微模糊背景，提升質感 */
+            backdrop-filter: blur(5px);
         }
         
 /* Standard (Desktop/Tablet) Sizes */
     h1 {
         font-family: 'Handlee', cursive; 
-        font-size: 3.5em; /* 56px */
+        font-size: 3.5em;
         margin-bottom: 5px;
         letter-spacing: 1px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
@@ -47,7 +48,7 @@
 
     h2 {
         font-family: 'Huninn', 'Varela Round', sans-serif;
-        font-size: 1.8em; /* 28.8px */
+        font-size: 1.8em;
         margin-top: 0;
         margin-bottom: 10px;
         letter-spacing: 2px;
@@ -55,10 +56,11 @@
     }
 
     p {
-        font-size: 1.2em; /* 19.2px */
+        font-size: 1.2em;
         margin-bottom: 30px;
     }
 
+        
     .upload-button {
         display: inline-block;
         background-color: var(--button-bg); 
@@ -79,6 +81,11 @@
     
     /* --- MOBILE STYLES (Screen size 600px and below) --- */
     @media (max-width: 600px) {
+        /* --- MOBILE BACKGROUND OVERRIDE --- */
+        body, html {
+            background: var(--bg-mobile) no-repeat center center fixed;
+            background-size: cover;
+        }
         
         .container {
             /* Reduce padding to give content more room */
@@ -100,6 +107,7 @@
             font-size: 1em; 
             margin-bottom: 20px;
         }
+        
 
         .upload-button {
             /* Reduce button text size and padding slightly */
@@ -119,7 +127,7 @@
     <a href="https://forms.gle/NzGJUCjaFFDmfocw7" class="upload-button">
         點擊上傳照片與影片
     </a>
-    <p style="font-size: 0.9em; margin-top: 25px; opacity: 0.8;">
+    <p style="font-size: 0.6em; margin-top: 25px; opacity: 0.8;">
         您的檔案將直接儲存到我們的 Google Drive 專屬資料夾。
     </p>
 </div>
