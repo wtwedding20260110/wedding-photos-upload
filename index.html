@@ -35,46 +35,79 @@
             backdrop-filter: blur(5px); /* 輕微模糊背景，提升質感 */
         }
         
-        h1 {
-            font-family: 'Handlee', cursive; /* Use Handlee */
-            font-size: 3.5em; 
-            margin-bottom: 5px;
-            letter-spacing: 1px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            line-height: 1.1;
-        }
+/* Standard (Desktop/Tablet) Sizes */
+    h1 {
+        font-family: 'Handlee', cursive; 
+        font-size: 3.5em; /* 56px */
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-family: 'Huninn', 'Varela Round', sans-serif;
+        font-size: 1.8em; /* 28.8px */
+        margin-top: 0;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    p {
+        font-size: 1.2em; /* 19.2px */
+        margin-bottom: 30px;
+    }
+
+    .upload-button {
+        display: inline-block;
+        background-color: var(--button-bg); 
+        color: var(--primary-color);
+        padding: 15px 35px;
+        font-size: 1.4em; /* 22.4px */
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: background-color 0.3s ease, transform 0.1s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .upload-button:hover {
+        background-color: var(--button-hover-bg); 
+        transform: translateY(-2px);
+    }
+    
+    /* --- MOBILE STYLES (Screen size 600px and below) --- */
+    @media (max-width: 600px) {
         
+        .container {
+            /* Reduce padding to give content more room */
+            padding: 30px 20px; 
+        }
+
+        h1 {
+            /* Reduce "Winkie & Tommy" from 3.5em to 2.5em */
+            font-size: 2.5em; 
+        }
+
         h2 {
-            font-size: 1.8em;
-            margin-top: 0;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* Reduce Chinese header from 1.8em to 1.4em */
+            font-size: 1.4em; 
         }
 
         p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
+            /* Reduce paragraph text from 1.2em to 1em */
+            font-size: 1em; 
+            margin-bottom: 20px;
         }
 
         .upload-button {
-            display: inline-block;
-            background-color: var(--button-bg);
-            color: var(--primary-color);
-            padding: 15px 35px;
-            font-size: 1.4em;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: background-color 0.3s ease, transform 0.1s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            /* Reduce button text size and padding slightly */
+            font-size: 1.2em;
+            padding: 12px 30px;
         }
-
-        .upload-button:hover {
-            background-color: var(--button-hover-bg);
-            transform: translateY(-2px);
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
 
